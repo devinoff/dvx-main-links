@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@theme {
+    --breakpoint-xs: 30rem;
+
+    --color-background-1: var(--dvx-background-1);
+    --color-background-2: var(--dvx-background-2);
+    --color-typography-1: var(--dvx-typography-1);
+    --color-typography-2: var(--dvx-typography-2);
+    --color-typography-3: var(--dvx-typography-3);
+    --color-primary: var(--dvx-primary);
+}
+
+@layer base {
+    :root {
+        --dvx-background-1: var(--color-white);
+        --dvx-background-2: var(--color-zinc-200);
+        --dvx-typography-1: var(--color-black);
+        --dvx-typography-2: var(--color-zinc-800);
+        --dvx-typography-3: var(--color-zinc-800);
+        --dvx-primary: var(--color-blue-400);
+
+        @media (prefers-color-scheme: dark) {
+            --dvx-background-1: var(--color-zinc-900);
+            --dvx-background-2: var(--color-zinc-800);
+            --dvx-typography-1: var(--color-white);
+            --dvx-typography-2: var(--color-zinc-300);
+            --dvx-typography-3: var(--color-zinc-400);
+            --dvx-primary: oklch(0.4377 0.0816 259.05);
+        }
+    }
+}
