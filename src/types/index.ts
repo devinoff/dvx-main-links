@@ -1,9 +1,14 @@
-import {Icon} from "@phosphor-icons/react";
+import {Icon} from '@phosphor-icons/react';
 
-export interface SocialLinkInterface {
+export interface CardInterface {
     id: number;
     name: string;
-    username: string;
+    heading: string;
     url: string;
     icon: Icon;
+}
+export interface CardGroupInterface {
+    id: number;
+    title: string;
+    cards: CardInterface[];
 }

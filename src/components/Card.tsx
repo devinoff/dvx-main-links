@@ -1,0 +1,18 @@
+import {ReactElement} from 'react';
+import {CardInterface} from '@/types';
+
+export default function Card({ link, className }: { link: CardInterface, className: string }): ReactElement {
+    return (
+        <a href={link.url} target='_blank' className={`flex items-center gap-4 bg-background-2 p-5 xs:p-6 rounded-xl border-2 border-primary group hover:bg-background-3 transition-colors duration-300 ease-in-out text-typography-2 ${className}`}>
+            <link.icon weight='regular' className='h-[50px] text-[44px] group-hover:text-[50px] transition-[font-size] duration-300 ease-in-out shrink-0' />
+            <div className='flex flex-col min-w-0'>
+                <span className='text-xl font-semibold truncate'>
+                    {link.name}
+                </span>
+                <small className='text-sm text-typography-3'>
+                    {link.heading}
+                </small>
+            </div>
+        </a>
+    );
+}
