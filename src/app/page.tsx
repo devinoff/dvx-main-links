@@ -1,8 +1,8 @@
 import {ReactElement} from 'react';
 import {config} from '@/config';
-import {GithubLogoIcon} from "@phosphor-icons/react/ssr";
-import Fheadter from "@/components/Fheadter";
-import CardGroup from "@/components/CardGroup";
+import {GithubLogoIcon} from '@phosphor-icons/react/ssr';
+import Fheadter from '@/components/Fheadter';
+import CardGroup from '@/components/CardGroup';
 
 export default function Home(): ReactElement {
   return (
